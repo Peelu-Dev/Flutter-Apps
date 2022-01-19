@@ -40,30 +40,57 @@ class FlutterBasics extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       color: Colors.blueGrey,
-      child: rowWidget(),
+      // child: rowWidget(),
+      child: columnWidget(),
     );
   }
 
   Widget rowWidget() {
-    return Row(
-      children: const <Widget>[
-        Expanded(
-          child: Text("Home Page",
+    return Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Row(
+          children: const <Widget>[
+            Expanded(
+              child: Text("Home Page",
+                  style: TextStyle(
+                      fontSize: 30.0,
+                      fontStyle: FontStyle.italic,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold)),
+            ),
+            Expanded(
+              child: Text("Main Content will be appear here",
+                  style: TextStyle(
+                      fontSize: 30.0,
+                      fontStyle: FontStyle.italic,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold)),
+            ),
+          ],
+        ));
+  }
+
+  Widget columnWidget() {
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Column(
+        children: const <Widget>[
+          Text("Home Page",
               style: TextStyle(
                   fontSize: 30.0,
                   fontStyle: FontStyle.italic,
                   color: Colors.white,
                   fontWeight: FontWeight.bold)),
-        ),
-        Expanded(
-          child: Text("Main Content will be appear here",
-              style: TextStyle(
-                  fontSize: 30.0,
-                  fontStyle: FontStyle.italic,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold)),
-        ),
-      ],
+          Expanded(
+            child: Text("Main Content will be appear here",
+                style: TextStyle(
+                    fontSize: 30.0,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold)),
+          )
+        ],
+      ),
     );
   }
 }
