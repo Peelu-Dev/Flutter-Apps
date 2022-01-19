@@ -1,25 +1,34 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  var app = const ExploreWidgets();
+  var app = const FlutterBasics();
   runApp(app);
 }
 
-class ExploreWidgets extends StatelessWidget {
-  const ExploreWidgets({Key? key}) : super(key: key);
+class FlutterBasics extends StatelessWidget {
+  const FlutterBasics({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Exploring Widgets"),
+          title: const Text("Flutter Basics"),
         ),
-        body: Container(
-          child: const Center(
-            child: Text("Hello!"),
+        body: const Center(
+          child: Text("Center Widget"),
+        ),
+        bottomNavigationBar: BottomAppBar(
+          child: Container(
+            height: 45.0,
+            color: Colors.lightBlue,
           ),
-          color: Colors.blue,
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          tooltip: "Click Me!",
+          child: const Icon(Icons.edit),
         ),
       ),
     );
