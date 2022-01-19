@@ -15,6 +15,12 @@ class ExploreWidgets extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Exploring Widgets"),
         ),
+        body: Container(
+          child: const Center(
+            child: Text("Hello!"),
+          ),
+          color: Colors.blue,
+        ),
       ),
     );
   }
